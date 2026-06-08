@@ -78,12 +78,12 @@ var Cell = /** @class */ (function () {
 var Grid = /** @class */ (function () {
     function Grid() {
         this._cells = [];
-        /*for (var i = 1; i <= 6; i++) {
+        for (var i = 1; i <= 6; i++) {
             for (var j = 1; j <= 6; j++) {
-                var cell = new Cell(i, j, Math.random() < 0.1); // 10% chance to have a hint
+                var cell = new Cell(i, j,/* Math.random() < 0.1*/); // 10% chance to have a hint
                 this._cells.push(cell);
             }
-        }*/
+        }
     }
     Grid.prototype.getCells = function () {
         return this._cells;

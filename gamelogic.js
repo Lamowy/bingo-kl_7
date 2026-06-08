@@ -127,7 +127,7 @@ function answerQuestion(answer) {
             if (answerElement_1) {
                 answerElement_1.style.backgroundColor = "green";
             }
-            currentTeam.updatePoints(currentQuestion.getX() * 15 / (isRetake ? 2 : 1));
+            currentTeam.updatePoints(currentQuestion.getY() * 15 / (isRetake ? 2 : 1));
             var cell = grid.getCell(currentQuestion.getX(), currentQuestion.getY());
             cell === null || cell === void 0 ? void 0 : cell.occupy(currentTeam);
             if (cell === null || cell === void 0 ? void 0 : cell.haveHint()) {
@@ -150,7 +150,7 @@ function answerQuestion(answer) {
             if (answerElement_1) {
                 answerElement_1.style.backgroundColor = "red";
             }
-            currentTeam.updatePoints(-currentQuestion.getX() * 15 / (isRetake ? 2 : 1));
+            //currentTeam.updatePoints(-currentQuestion.getX() * 15 / (isRetake ? 2 : 1));
             refreshRetakers();
             setTimeout(function () {
                 retakeElement.style.display = "block";
